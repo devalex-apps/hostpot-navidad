@@ -41,23 +41,13 @@
   }
 }
 
-@keyframes gradient-up {
+@keyframes translate-left {
   0% {
-    background: linear-gradient(-360deg, rgba(0,0,0,1), rgba(36, 13, 13, 1)), url('../img/navidad.gif');
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    transition: all 0.5s;
+    margin-left: 100vw;
   }
 
   100% {
-    background: linear-gradient(-360deg, rgba(0,0,0,1), rgba(36, 13, 13, 0.9)), url('../img/navidad.gif');
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    transition: all 0.5s;
+    margin-left: -120vw;
   }
 }
 
@@ -71,7 +61,6 @@ body {
   background-position: center;
   background-size: cover;
   overflow: hidden;
-  /* animation: gradient-up 2s; */
   transition: all 0.5s;
 }
 
@@ -266,13 +255,24 @@ p {
 
 @media screen and (width < 500px) {
   .img-santa {
-    width: 400px;
-    height: 400px;
+    width: 500px;
+    height: 500px;
     position: fixed;
-    margin-top: 150px;
-    margin-inline: auto;
+    margin-top: 50vh;
+    margin-left: -20vw;
     z-index: -100;
     filter: drop-shadow(-10px -10px 0px white) brightness(20%);
     animation: translate-up 0.5s;
+  }
+
+  .img-trineo {
+    width: 400px;
+    position: fixed;
+    margin-inline: auto;
+    z-index: -100;
+    margin-top: 20vh;
+    margin-left: -120vw;
+    filter: drop-shadow(-10px -10px 0px rgb(15, 15, 15)) brightness(15%);
+    animation: translate-left 10s;
   }
 }
