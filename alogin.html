@@ -1,0 +1,30 @@
+<html>
+<head>
+<meta http-equiv="refresh" content="2; url=$(link-redirect)">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="pragma" content="no-cache">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"/>
+<meta http-equiv="expires" content="-1">
+<link rel="stylesheet" href="./css/index.css" />
+
+<title>Mikrotik hotspot > redirect</title>
+<script language="JavaScript">
+<!--
+    function startClock() {
+        $(if popup == 'true')
+        open('$(link-status)', 'hotspot_status', 'toolbar=0,location=0,directories=0,status=0,menubars=0,resizable=1,width=290,height=200');
+	$(endif)
+	location.href = unescape('$(link-redirect-esc)');
+    }
+//-->
+</script>
+</head>
+<body onLoad="startClock()">
+	<div class="container">
+		You are logged in
+		<br/>
+		<br/>
+		If nothing happens, click <a href="$(link-redirect)">here
+	</div>
+</body>
+</html>

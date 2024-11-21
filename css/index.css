@@ -1,0 +1,262 @@
+* {
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: 0;
+
+  font-size: 14px;
+  color: #ffffff; 
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+@keyframes queue {
+  0% {
+    text-shadow: 0px 0px 5px rgb(255, 36, 36);
+  }
+  25% {
+    text-shadow: 0px 0px 5px rgb(0, 168, 70);
+  }
+
+  50% {
+    text-shadow: 0px 0px 5px rgb(0, 80, 230);
+  }
+
+  75% {
+    text-shadow: 0px 0px 5px rgb(255, 255, 255);
+  }
+
+  100% {
+    text-shadow: 0px 0px 5px rgb(255, 39, 39);
+  }
+}
+
+@keyframes translate-up {
+  0% {
+    margin-top: 100vh;
+  }
+
+  100% {
+    margin-bottom: 0;
+  }
+}
+
+@keyframes gradient-up {
+  0% {
+    background: linear-gradient(-360deg, rgba(0,0,0,1), rgba(36, 13, 13, 1)), url('../img/navidad.gif');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: all 0.5s;
+  }
+
+  100% {
+    background: linear-gradient(-360deg, rgba(0,0,0,1), rgba(36, 13, 13, 0.9)), url('../img/navidad.gif');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: all 0.5s;
+  }
+}
+
+body {
+  height: 100dvh;
+  display: grid;
+  place-content: center;
+  background: linear-gradient(-360deg, rgba(0,0,0,1), rgba(87, 32, 32, 0.9)), url('../img/navidad.gif');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  /* animation: gradient-up 2s; */
+  transition: all 0.5s;
+}
+
+p {
+  line-height: 30px;
+}
+
+.img-santa {
+  width: 100%;
+  position: fixed;
+  margin-inline: auto;
+  z-index: -100;
+  filter: drop-shadow(-10px -10px 0px white) brightness(20%);
+  animation: translate-up 0.5s;
+}
+
+.container {
+  display: block;
+  text-align: center;
+}
+
+.form-login {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  padding: 20px 40px;
+  margin-block: 20px;
+  border-radius: 15px;
+  border: 2px solid white;
+  max-width: 350px;
+  background-color: rgba(22, 83, 47, 0.2);
+  box-shadow: inset 0px -5px 0px white;
+  margin-inline: 5px;
+  gap: 15px;
+
+  & .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    & input {
+      padding: 15px 20px;
+      background-color: transparent;
+      border: 1px solid rgba(255,255,255,0.8);
+      border-radius: 5px;
+      color: white;
+      outline: none;
+
+      &::placeholder {
+        color: white;
+      }
+
+      &:hover {
+        border: 1px solid white;
+      }
+      
+      &:focus {
+        border: 1px solid white;
+        box-shadow: inset 0px -4px 0px white;
+      }
+
+      transition: all 0.2s ease-in-out;
+    }
+  }
+
+  & button {
+    padding: 15px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-weight: bold;
+    color: white;
+    border: 1px solid white;
+    background-color: transparent;
+    letter-spacing: 1px;
+
+    &:hover {
+      color: rgb(207, 50, 50);
+      background-color: white;
+      border: 1px solid white;
+    }
+
+    transition: all 0.2s ease-in-out;
+  }
+
+  & img {
+    width: 100%;
+    height: auto;
+    filter: grayscale(100%);
+  }
+
+  .power-by {
+    font-size: 14px;
+    width: fit-content;
+    margin-inline: auto;
+  }
+
+  .content-error {
+    border: 1px solid rgba(153, 27, 4, 0.4);
+    background-color: rgba(151, 23, 0, 0.2);
+    padding: 20px 10px;
+    border-radius: 5px;
+  }
+
+  & .title-login {
+    font-size: 25px;
+    margin-block: 10px;
+    width: fit-content;
+    margin-inline: auto;
+    text-align: center;
+    text-shadow: 0px 1px 0px rgb(151, 40, 40);
+
+    & .queue {
+      font-size: 30px;
+      animation: queue 2.5s;
+      animation-iteration-count: infinite;
+    }
+  }
+
+  & .notice {
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+.form-status {
+  width: 90vw;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  margin-block: 10px;
+  border-radius: 15px;
+  gap: 15px;
+
+  & .content-info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px;
+    border: 1px solid rgba(231, 255, 247, 0.2);
+    border-radius: 10px;
+  }
+
+  & .welcome {
+    font-size: 25px;
+    margin-block: 10px;
+    width: fit-content;
+    margin-inline: auto;
+    text-shadow: 0px 5px 0px white;
+    text-transform: uppercase;
+  }
+
+  & button {
+    padding: 15px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-weight: bold;
+    color: white;
+    border: 1px solid white;
+    background-color: transparent;
+    letter-spacing: 1px;
+
+    &:hover {
+      color: rgb(207, 50, 50);
+      background-color: white;
+      border: 1px solid white;
+    }
+
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+
+
+
+@media screen and (width < 500px) {
+  .img-santa {
+    width: 400px;
+    height: 400px;
+    position: fixed;
+    margin-top: 150px;
+    margin-inline: auto;
+    z-index: -100;
+    filter: drop-shadow(-10px -10px 0px white) brightness(20%);
+    animation: translate-up 0.5s;
+  }
+}
